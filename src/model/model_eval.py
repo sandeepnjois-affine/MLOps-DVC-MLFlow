@@ -18,9 +18,11 @@ from mlflow.models import infer_signature
 dagshub.init(repo_owner='sandeepnjois-affine', repo_name='MLOps-DVC-MLFlow', mlflow=True)
 
 # Set the experiment name in MLflow
+exp_name = 'DVC PIPELINE'
+run_name = 'V2'
+mlflow.set_experiment(exp_name)
 
-mlflow.set_experiment("DVC PIPELINE")
-
+git_commit_msg = exp_name + '-' + run_name
 # Set the tracking URI for MLflow to log the experiment in DagsHub
 mlflow.set_tracking_uri("https://dagshub.com/sandeepnjois-affine/MLOps-DVC-MLFlow.mlflow") 
 
@@ -117,7 +119,7 @@ def main():
         model = load_model(model_path)
 
         # Start MLflow run
-        with mlflow.start_run() as run:
+        with mlflow.start_run(run_name=run_name) as run:
             metrics = evaluation_model(model, X_test, y_test, model_name)
             save_metrics(metrics, metrics_path)
 
@@ -143,3 +145,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print("git_commit_msg:   ", git_commit_msg)
