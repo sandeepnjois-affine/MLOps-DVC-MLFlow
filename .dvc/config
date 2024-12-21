@@ -1,0 +1,5 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = azure://dvc-test
+    account_name = stak4ow44qkuwqg
