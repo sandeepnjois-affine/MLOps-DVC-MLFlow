@@ -19,7 +19,7 @@ dagshub.init(repo_owner='sandeepnjois-affine', repo_name='MLOps-DVC-MLFlow', mlf
 
 # Set the experiment name in MLflow
 exp_name = 'DVC PIPELINE'
-run_name = 'V2'
+run_name = 'V4'
 mlflow.set_experiment(exp_name)
 
 git_commit_msg = exp_name + '-' + run_name
