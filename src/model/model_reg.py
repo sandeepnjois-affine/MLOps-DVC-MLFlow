@@ -7,7 +7,7 @@ dagshub.init(repo_owner='sandeepnjois-affine', repo_name='MLOps-DVC-MLFlow', mlf
 
 # Set the experiment name in MLflow
 
-mlflow.set_experiment("DVC PIPELINE")
+mlflow.set_experiment("MLOps")
 
 # Set the tracking URI for MLflow to log the experiment in DagsHub
 mlflow.set_tracking_uri("https://dagshub.com/sandeepnjois-affine/MLOps-DVC-MLFlow.mlflow") 
