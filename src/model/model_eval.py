@@ -18,7 +18,7 @@ from mlflow.models import infer_signature
 dagshub.init(repo_owner='sandeepnjois-affine', repo_name='MLOps-DVC-MLFlow', mlflow=True)
 
 # Set the experiment name in MLflow
-exp_name = 'DVC PIPELINE'
+exp_name = 'MLOps'
 run_name = 'V4'
 mlflow.set_experiment(exp_name)
 
